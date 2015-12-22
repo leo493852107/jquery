@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>stop_params</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("#start").click(function() {
+                $("div").animate({left:'100px'}, 5000);
+                $("div").animate({fontSize:'3em'}, 5000);
+            });
+
+            $("#stop").click(function() {
+                $("div").stop();
+            });
+
+            $("#stop2").click(function() {
+                $("div").stop(true);
+            });
+
+            $("#stop3").click(function() {
+                $("div").stop(true, true);
+            });
+
+        });
+    </script>
+    <style type="text/css">
+        #panel,#flip {
+            padding: 5px;
+            text-align: center;
+            background-color: #e5eecc;
+            border: solid 1px #c3c3c3;
+        }
+        #panel {
+            padding: 50px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+<button id="start">Start</button>
+<button id="stop">Stop</button>
+<button id="stop2">Stop all</button>
+<button id="stop3">Stop but finish</button>
+
+<p>The "Start" button starts the animation.</p>
+<p>The "Stop" button stops the current active animation, but allows the queued animations to be performed afterwards.</p>
+<p>The "Stop all" button stops the current active animation and clears the
+    animation queue; so all animations on the element is stopped.</p>
+<p>The "Stop but finish" rushes through the current active animation, then it stops.</p>
+
+<div style="background-color: #98bf21;height: 100px;width: 200px;position: absolute;">Hello</div>
+
+</body>
+</html>
