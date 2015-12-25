@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>html_prepend2</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        function appendText() {
+            var txt1 = "<p>Text1.</p>";
+            var txt2 = $("<p></p>").text("Text2.");
+            var txt3 = document.createElement("p");
+            txt3.innerHTML = "Text3.";
+            $("body").append(txt1, txt2, txt3);
+        }
+    </script>
+
+</head>
+<body>
+
+<p>This is a paragraph.</p>
+<button onclick="appendText()">Append text</button>
+
+</body>
+</html>

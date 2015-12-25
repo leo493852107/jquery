@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>dom_val_get</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("button").click(function () {
+                alert("Value: " + $("#test").val());
+            });
+        });
+    </script>
+
+</head>
+<body>
+
+<p>Name: <input type="text" id="test" value="hello"></p>
+<button>Show Value</button>
+
+</body>
+</html>
