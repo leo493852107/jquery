@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ajax_post</title>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $.post("demo_test_post.php",
+                {
+                    name: "Weizhong Tu",
+                    city: "TianJin"
+                },function (data ,status) {
+                    alert("Data: " + data + "\nStatus: " + status);
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+
+<button>发送一个 HTTP POST 请求道页面并获取返回内容</button>
+
+</body>
+</html>
